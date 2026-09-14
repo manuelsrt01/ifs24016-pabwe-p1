@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form Pendaftaran Akun</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">IMDb</a> |
+        <a href="blog.html">Dev Blogs</a> |
+        <a href="form.html">Register</a> |
+        <a href="cv.html">CV</a>
+    </nav>
+
+
+    <form>
+
+        <fieldset>
+
+            <legend>Daftar Akun</legend>
+
+
+            <!-- Nama Lengkap -->
+
+            <p>
+                <label for="nama">
+                    Nama Lengkap:
+                </label>
+
+                <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    required>
+            </p>
+
+            <hr>
+
+
+            <!-- Jenis Kelamin -->
+
+            <p>
+                Jenis Kelamin:
+
+                <label>
+                    <input
+                        type="radio"
+                        name="jenis_kelamin"
+                        value="laki-laki"
+                        required>
+                    Laki-laki
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="jenis_kelamin"
+                        value="perempuan">
+                    Perempuan
+                </label>
+            </p>
+
+            <hr>
+
+
+            <!-- Tempat Lahir -->
+
+            <p>
+                <label for="tempat_lahir">
+                    Tempat Lahir:
+                </label>
+
+                <input
+                    type="text"
+                    id="tempat_lahir"
+                    name="tempat_lahir"
+                    required>
+            </p>
+
+            <hr>
+
+
+            <!-- Tanggal Lahir -->
+
+            <p>
+                <label for="tanggal_lahir">
+                    Tanggal Lahir:
+                </label>
+
+                <input
+                    type="date"
+                    id="tanggal_lahir"
+                    name="tanggal_lahir"
+                    required>
+            </p>
+
+            <hr>
+
+
+            <!-- Agama -->
+
+            <p>
+
+                <label for="agama">
+                    Agama:
+                </label>
+
+                <select
+                    id="agama"
+                    name="agama"
+                    required>
+
+                    <option value="">
+                        -- Pilih Agama --
+                    </option>
+
+                    <option value="kristen">
+                        Kristen
+                    </option>
+
+                    <option value="islam">
+                        Islam
+                    </option>
+
+                    <option value="hindu">
+                        Hindu
+                    </option>
+
+                    <option value="budha">
+                        Budha
+                    </option>
+
+                    <option value="konghucu">
+                        Konghucu
+                    </option>
+
+                    <option value="katolik">
+                        Katolik
+                    </option>
+
+                </select>
+
+            </p>
+
+            <hr>
+
+
+            <!-- Hobi -->
+
+            <p>
+
+                Hobi:
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="hobi"
+                        value="olahraga">
+                    Olahraga
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="hobi"
+                        value="membaca">
+                    Membaca
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="hobi"
+                        value="ngoding">
+                    Ngoding
+                </label>
+
+            </p>
+
+            <hr>
+
+
+            <!-- Password -->
+
+            <p>
+
+                <label for="password">
+                    Password:
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required>
+
+            </p>
+
+            <hr>
+
+
+            <!-- Persetujuan -->
+
+            <p>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        name="persetujuan"
+                        required>
+
+                    Dengan mendaftar saya setuju dengan
+                    Ketentuan dan Kebijakan Privasi Aplikasi.
+
+                </label>
+
+            </p>
+
+            <hr>
+
+
+            <!-- Tombol -->
+
+            <input
+                type="reset"
+                value="Reset">
+
+            <input
+                type="submit"
+                value="Submit">
+
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
