@@ -1,88 +1,119 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
-    <title>How to Deploy a Web Application Using Docker and NGINX on Your Own Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panduan deploy web application menggunakan Docker dan NGINX pada server Linux.">
+    <title>How to Deploy Web Application Using Docker</title>
 </head>
 
 <body>
 
-  <nav>
-        <a href="index.html">IMDb</a> |
-        <a href="blog.html">Dev Blogs</a> |
-        <a href="form.html">Register</a> |
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="blog.html">Blog</a> |
+        <a href="form.html">Form</a> |
         <a href="cv.html">CV</a>
     </nav>
 
-  <main>
+    <main>
 
-    <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk8sq4oiy0stnozjd1xgs.png" width="100%" alt="cover docker nginx">
+        <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31"
+            width="600"
+            alt="Server dan perangkat jaringan">
 
-    <table border="0" cellpadding="4" cellspacing="0">
-        <tr>
-            <td>
-                <img src="https://www.bmhs.co.id/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-21-at-15.52.47_550555c5-1.jpg" width="32" height="32" alt="foto profil Vishnu Satheesh">
-            </td>
+        <table>
+            <tr>
+                <td>
+                    <img
+                        src="https://randomuser.me/api/portraits/men/32.jpg"
+                        width="50"
+                        height="50"
+                        alt="Foto profil penulis">
+                </td>
+                <td>
+                    <strong>John Doe</strong><br>
+                    Web Developer
+                </td>
+            </tr>
+        </table>
 
-            <td>
-                <p>
-                    <span><b>Vishnu Satheesh</b></span><br />
-                    <span>Posted on May 31</span>
-                </p>
-            </td>
-        </tr>
-    </table>
+        <h1>How to Deploy Web Application Using Docker</h1>
 
-    <h1>How to Deploy a Web Application Using Docker and NGINX on Your Own Server</h1>
+        <p>
+            Docker merupakan platform yang dapat digunakan untuk menjalankan
+            aplikasi di dalam container.
+        </p>
 
-    <p><span>#webdev</span>&nbsp;&nbsp;<span>#devops</span></p>
+        <p>
+            Dengan menggunakan Docker, proses deployment aplikasi dapat
+            dilakukan dengan lebih mudah dan konsisten.
+        </p>
 
-    <hr>
+        <p>
+            <strong>Tags:</strong>
+            Docker, Web Development, Deployment
+        </p>
 
-    <p>Deploying a web application doesn't need to be a complicated process. With Docker, NGINX, and your own server, you can get your app live in no time.</p>
+        <h2>Step 1: Prepare the Application</h2>
 
-    <p>In this blog, I'll show you step by step how to serve your app with a domain, route traffic with NGINX, and run it all inside a Docker container. This guide is specifically tailored for a Linux-based server.</p>
+        <p>
+            Pastikan aplikasi web sudah tersedia dan dapat dijalankan
+            pada lingkungan pengembangan.
+        </p>
 
-    <h2>Step 1: Setup Docker</h2>
+        <h2>Step 2: Create Docker Configuration</h2>
 
-    <p>First, let's set up Docker. I'm using a simple React app as an example, but feel free to use any application or codebase of your choice. Create a Dockerfile in your project directory to define how your application should be containerized.</p>
+        <p>
+            Buat Dockerfile yang berisi konfigurasi untuk membangun
+            image aplikasi.
+        </p>
 
-    <p>Dockerfile:<br />
-    FROM node:20-alpine<br />
-    WORKDIR /app<br />
-    COPY package*.json ./<br />
-    RUN npm install<br />
-    COPY . .<br />
-    CMD [ "npm", "start" ]</p>
+        <p>
+            Setelah image berhasil dibuat, aplikasi dapat dijalankan
+            menggunakan container Docker.
+        </p>
 
-    <h2>Step 2: Build and Run the Docker Container (on your server)</h2>
+        <h2>Conclusion</h2>
 
-    <p>Once you've created your Dockerfile, the next step is to build your Docker image and run it to make sure everything is working as expected.</p>
+        <p>
+            Docker membantu developer dalam melakukan deployment aplikasi
+            secara konsisten pada berbagai lingkungan.
+        </p>
 
-    <h2>Conclusion</h2>
+        <h2>Top Comments</h2>
 
-    <p>Deploying your web application using Docker and NGINX on your own server might sound intimidating at first, but once you break it down, it's quite manageable.</p>
+        <table border="1">
+            <tr>
+                <td>
+                    <img
+                        src="https://via.placeholder.com/50"
+                        width="50"
+                        height="50"
+                        alt="">
+                </td>
+                <td>
+                    <strong>Anonymous</strong>
+                    <p>
+                        Artikel yang sangat membantu.
+                    </p>
+                </td>
+            </tr>
+        </table>
 
-    <p>By containerizing your app, setting up NGINX as a reverse proxy, and linking everything together on your VPS, you gain full control over your deployment process.</p>
+        <br>
 
-    <hr>
+        <label for="comment">Write a comment:</label><br>
+        <textarea
+            id="comment"
+            name="comment"
+            rows="5"
+            cols="50"
+            placeholder="Write your comment here">
+        </textarea>
 
-    <h2>Top comments (0)</h2>
-
-    <table border="0" cellpadding="4" cellspacing="0">
-        <tr>
-            <td>
-                <img src="https://via.placeholder.com/32" alt="">
-            </td>
-
-            <td>
-                <textarea rows="3" cols="50" placeholder="Add to the discussion"></textarea>
-            </td>
-        </tr>
-    </table>
-
-  </main>
+    </main>
 
 </body>
 </html>
