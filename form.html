@@ -1,15 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="id">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Curriculum Vitae - Manuel Santana Sirait</title>
-
+    <title>Form Pendaftaran Akun</title>
 </head>
 
 <body>
@@ -23,257 +17,226 @@
 
     <main>
 
-        <!-- HEADER -->
+        <form>
 
-        <table border="0" width="100%" cellpadding="10" cellspacing="0">
+            <fieldset>
 
-            <tr>
+                <legend>Daftar Akun</legend>
 
-                <!-- FOTO -->
 
-                <td width="30%" valign="top">
+                <!-- Nama Lengkap -->
 
-                    <img src="profile.png"
-                         alt="Foto Profil Manuel Santana Sirait"
-                         width="200"
-                         height="200">
+                <p>
+                    <label for="nama">
+                        Nama Lengkap:
+                    </label>
 
-                </td>
+                    <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        required>
+                </p>
 
+                <hr>
 
-                <!-- INFORMASI DIRI -->
 
-                <td width="70%" valign="top">
+                <!-- Jenis Kelamin -->
 
-                    <h1>Manuel Santana Sirait</h1>
+                <p>
+                    Jenis Kelamin:
 
-                    <hr>
+                    <label>
+                        <input
+                            type="radio"
+                            name="jenis_kelamin"
+                            value="laki-laki"
+                            required>
+                        Laki-laki
+                    </label>
 
-                    <h2>Sarjana Informatika</h2>
+                    <label>
+                        <input
+                            type="radio"
+                            name="jenis_kelamin"
+                            value="perempuan">
+                        Perempuan
+                    </label>
+                </p>
 
-                    <p>
-                        Email: manuelssirait@gmail.com<br>
-                        WA: +62 822 8310 2830
-                    </p>
+                <hr>
 
-                    <p>
-                        Saya adalah seorang Mahasiswa yang suka belajar memiliki rasa empati
-                        yang tinggi dan menjunjung tinggi tanggung jawab. Saya seorang Mahasiswa
-                        yang penuh dengan kejujuran.
-                    </p>
 
-                </td>
+                <!-- Tempat Lahir -->
 
-            </tr>
+                <p>
+                    <label for="tempat_lahir">
+                        Tempat Lahir:
+                    </label>
 
-        </table>
+                    <input
+                        type="text"
+                        id="tempat_lahir"
+                        name="tempat_lahir"
+                        required>
+                </p>
 
+                <hr>
 
 
-        <!-- BAGIAN UTAMA -->
+                <!-- Tanggal Lahir -->
 
-        <table border="0" width="100%" cellpadding="10" cellspacing="0">
+                <p>
+                    <label for="tanggal_lahir">
+                        Tanggal Lahir:
+                    </label>
 
-            <tr>
+                    <input
+                        type="date"
+                        id="tanggal_lahir"
+                        name="tanggal_lahir"
+                        required>
+                </p>
 
+                <hr>
 
-                <!-- KOLOM KIRI -->
 
-                <td width="55%" valign="top">
+                <!-- Agama -->
 
+                <p>
 
-                    <!-- PENDIDIKAN -->
+                    <label for="agama">
+                        Agama:
+                    </label>
 
-                    <h2>Pendidikan</h2>
+                    <select
+                        id="agama"
+                        name="agama"
+                        required>
 
-                    <hr>
+                        <option value="">
+                            -- Pilih Agama --
+                        </option>
 
-                    <p>
-                        <strong>Sarjana Informatika</strong> |
-                        IPK : 3,00/4.00<br>
-                        Institut Teknologi Del (2024–2028)
-                    </p>
+                        <option value="kristen">
+                            Kristen
+                        </option>
 
-                    <ul>
+                        <option value="islam">
+                            Islam
+                        </option>
 
-                        <li>SMA SWASTA RK BINTANG TIMUR PEMATANGSIANTAR</li>
+                        <option value="hindu">
+                            Hindu
+                        </option>
 
-                        <li>SMP SWASTA RK BINTANG TIMUR PEMATANGSIANTAR</li>
+                        <option value="budha">
+                            Budha
+                        </option>
 
-                        <li>SD SWASTA RK ABDI SEJATI PERDAGANGAN</li>
+                        <option value="konghucu">
+                            Konghucu
+                        </option>
 
-                    </ul>
+                        <option value="katolik">
+                            Katolik
+                        </option>
 
+                    </select>
 
+                </p>
 
-                    <!-- PENGALAMAN -->
+                <hr>
 
-                    <h2>Pengalaman</h2>
 
-                    <hr>
+                <!-- Hobi -->
 
-                    <p>
-                        <strong>Divisi Minat Bakat</strong> | Organisasi<br>
-                        Himpunan Mahasiswa Informatika (2025–Sekarang)
-                    </p>
+                <p>
 
-                    <p>
-                       <strong>Samsung Solve Tomorrow (SVT)</strong> | Kompetisi<br>
-                       Peserta SVT (2025)
-                    </p>
+                    Hobi:
 
-                    <p>
-                        <strong>Program Kreativitas Mahasiswa (PKM)</strong>
-                        | Kompetisi<br>
-                        Peserta PKM (2025 &amp; 2026)
-                    </p>
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="hobi"
+                            value="olahraga">
+                        Olahraga
+                    </label>
 
-                    <p>
-                        <strong>GEMASTIK</strong> | Kompetisi<br>
-                        Peserta GEMASTIK (2025 &amp; 2026)
-                    </p>
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="hobi"
+                            value="membaca">
+                        Membaca
+                    </label>
 
-                    <p>
-                        <strong>Komisi Pemilihan Umum (KPU)</strong> | Panitia<br>
-                        Anggota Panitia (2026)
-                    </p>
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="hobi"
+                            value="ngoding">
+                        Ngoding
+                    </label>
 
-                </td>
+                </p>
 
+                <hr>
 
 
-                <!-- KOLOM KANAN -->
+                <!-- Password -->
 
-                <td width="45%" valign="top">
+                <p>
 
+                    <label for="password">
+                        Password:
+                    </label>
 
-                    <!-- KEAHLIAN -->
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required>
 
-                    <h2>Keahlian</h2>
+                </p>
 
-                    <hr>
+                <hr>
 
-                    <h3>Programming</h3>
 
-                    <ul>
+                <!-- Persetujuan -->
 
-                        <li>HTML</li>
+                <p>
 
-                        <li>CSS</li>
+                    <label>
 
-                        <li>JavaScript</li>
+                        <input
+                            type="checkbox"
+                            name="persetujuan"
+                            required>
 
-                        <li>Python</li>
+                        Dengan mendaftar saya setuju dengan
+                        Ketentuan dan Kebijakan Privasi Aplikasi.
 
-                        <li>Haskell</li>
+                    </label>
 
-                    </ul>
+                </p>
 
+                <hr>
 
-                    <h3>Framework</h3>
 
-                    <ul>
-                        <li>Flask</li>
+                <!-- Tombol -->
 
-                        <li>Laravel</li>
+                <input
+                    type="reset"
+                    value="Reset">
 
-                        <li>NextJS</li>
+                <input
+                    type="submit"
+                    value="Submit">
 
-                        <li>ReactJS</li>
-                    </ul>
+            </fieldset>
 
-
-                    <h3>Tools &amp; Design</h3>
-
-                    <ul>
-
-                        <li>UI/UX Design</li>
-
-                        <li>Figma</li>
-
-                        <li>Git &amp; GitHub</li>
-
-                        <li>Visual Studio Code</li>
-
-                    </ul>
-
-                </td>
-
-            </tr>
-
-        </table>
-
-
-
-        <!-- SERTIFIKAT -->
-
-        <h2>Sertifikat</h2>
-
-        <hr>
-
-        <h3>Dicoding</h3>
-
-        <ol>
-
-            <li>
-                Web3 Engineering for Developers: Skill, Tools, dan Peluang Karir
-                (April 2025)
-            </li>
-
-            <li>
-                Mengatasi Error Kotlin dengan Debugging (April 2025)
-            </li>
-
-            <li>
-                Unlock Limitless AI Potential with the Agentic Trend (Juni 2025)
-            </li>
-
-        </ol>
-
-        <h3>MySkill</h3>
-
-        <ol>
-
-          <li>
-            UI/UX Research and Design (September 2026)
-          </li>
-
-        </ol>
-
-        <!-- PORTFOLIO -->
-
-        <h2>Portfolio</h2>
-
-        <hr>
-
-        <h3>GitHub | @manuelsrt01</h3>
-
-        <ol>
-
-            <li>Forum API | JavaScript | HapiJS</li>
-
-            <li>Github Expose | Kotlin | Android</li>
-
-            <li>Kas Tracking | PHP | Laravel</li>
-
-            <li>Sorun | .Net | Visual Studio</li>
-
-            <li>Zodiac Pedia | Dart | Flutter</li>
-
-        </ol>
-
-
-        <h3>Figma | @manuelsrt1</h3>
-
-        <ol>
-
-            <li>ResearchDesign | UI/UX</li>
-
-            <li>TanaDesign | UI/UX</li>
-
-            <li>GGDesign | UI/UX</li>
-
-        </ol>
+        </form>
 
     </main>
 
