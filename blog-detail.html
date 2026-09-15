@@ -1,88 +1,63 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-    <title>How to Deploy a Web Application Using Docker and NGINX on Your Own Server</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Panduan lengkap deploy aplikasi web menggunakan Docker dan NGINX di server sendiri.">
+<title>Blog Detail - How to Deploy a Web Application Using Docker and NGINX</title>
 </head>
-
 <body>
 
-  <nav>
-        <a href="index.html">IMDb</a> |
-        <a href="blog.html">Dev Blogs</a> |
-        <a href="form.html">Register</a> |
-        <a href="cv.html">CV</a>
-    </nav>
+<nav>
+<a href="index.html">IMDb Top 3 Movies</a> |
+<a href="blog.html">Dev Blogs</a> |
+<a href="form.html">Form Daftar Akun</a> |
+<a href="cv.html">Curriculum Vitae</a>
+</nav>
 
-  <main>
+<main>
 
-    <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk8sq4oiy0stnozjd1xgs.png" width="100%" alt="cover docker nginx">
+<hr>
 
-    <table border="0" cellpadding="4" cellspacing="0">
-        <tr>
-            <td>
-                <img src="https://www.bmhs.co.id/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-21-at-15.52.47_550555c5-1.jpg" width="32" height="32" alt="foto profil Vishnu Satheesh">
-            </td>
+<img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fk8sq4oiy0stnozjd1xgs.png" width="100%" alt="Blog Cover">
 
-            <td>
-                <p>
-                    <span><b>Vishnu Satheesh</b></span><br />
-                    <span>Posted on May 31</span>
-                </p>
-            </td>
-        </tr>
-    </table>
+<p>
+  <img src="https://picsum.photos/id/177/32/32" width="32" height="32" alt="Vishnu Satheesh">
+  <span><strong>Vishnu Satheesh</strong></span>&nbsp;&nbsp;
+  <span>May 31</span>
+</p>
 
-    <h1>How to Deploy a Web Application Using Docker and NGINX on Your Own Server</h1>
+<h1>How to Deploy a Web Application Using Docker and NGINX on Your Own Server</h1>
 
-    <p><span>#webdev</span>&nbsp;&nbsp;<span>#devops</span></p>
+<hr>
 
-    <hr>
+<p>
+Menjalankan aplikasi web di server sendiri sering terasa merepotkan karena perbedaan environment antara laptop pengembang dan server produksi. Docker menyelesaikan masalah ini dengan cara mengemas aplikasi beserta seluruh dependensinya ke dalam sebuah container yang dapat dijalankan secara konsisten di mana saja, sementara NGINX berperan sebagai reverse proxy yang menangani lalu lintas HTTP menuju aplikasi tersebut.
+</p>
 
-    <p>Deploying a web application doesn't need to be a complicated process. With Docker, NGINX, and your own server, you can get your app live in no time.</p>
+<p>
+<strong>Step 1: Setup Docker</strong><br>
+Langkah pertama adalah menginstal Docker pada server, lalu memastikan layanan Docker berjalan dengan baik. Selanjutnya, buat sebuah Dockerfile pada root proyek yang mendefinisikan base image, dependensi, dan perintah untuk menjalankan aplikasi. Dockerfile ini menjadi cetak biru bagaimana image aplikasi akan dibangun.
+</p>
 
-    <p>In this blog, I'll show you step by step how to serve your app with a domain, route traffic with NGINX, and run it all inside a Docker container. This guide is specifically tailored for a Linux-based server.</p>
+<p>
+<strong>Step 2: Build and Run the Docker Container</strong><br>
+Setelah Dockerfile siap, gunakan perintah build untuk membuat image dari Dockerfile tersebut, kemudian jalankan container dari image itu dengan mapping port yang sesuai. Setelah container berjalan, konfigurasikan NGINX sebagai reverse proxy yang meneruskan permintaan dari port 80 ke port aplikasi di dalam container, sehingga aplikasi dapat diakses melalui domain atau IP server tanpa perlu menyebutkan port secara eksplisit.
+</p>
 
-    <h2>Step 1: Setup Docker</h2>
+<p>
+<strong>Conclusion</strong><br>
+Dengan menggabungkan Docker dan NGINX, proses deployment menjadi lebih rapi, mudah direplikasi, dan lebih aman karena aplikasi berjalan terisolasi di dalam container. Pendekatan ini sangat cocok digunakan baik untuk proyek kecil maupun aplikasi produksi yang membutuhkan skalabilitas di kemudian hari.
+</p>
 
-    <p>First, let's set up Docker. I'm using a simple React app as an example, but feel free to use any application or codebase of your choice. Create a Dockerfile in your project directory to define how your application should be containerized.</p>
+<hr>
 
-    <p>Dockerfile:<br />
-    FROM node:20-alpine<br />
-    WORKDIR /app<br />
-    COPY package*.json ./<br />
-    RUN npm install<br />
-    COPY . .<br />
-    CMD [ "npm", "start" ]</p>
+<p>
+  <img src="https://picsum.photos/id/64/32/32" width="32" height="32" alt="Your profile">
+</p>
+<textarea rows="3" placeholder="Add to the discussion"></textarea>
 
-    <h2>Step 2: Build and Run the Docker Container (on your server)</h2>
-
-    <p>Once you've created your Dockerfile, the next step is to build your Docker image and run it to make sure everything is working as expected.</p>
-
-    <h2>Conclusion</h2>
-
-    <p>Deploying your web application using Docker and NGINX on your own server might sound intimidating at first, but once you break it down, it's quite manageable.</p>
-
-    <p>By containerizing your app, setting up NGINX as a reverse proxy, and linking everything together on your VPS, you gain full control over your deployment process.</p>
-
-    <hr>
-
-    <h2>Top comments (0)</h2>
-
-    <table border="0" cellpadding="4" cellspacing="0">
-        <tr>
-            <td>
-                <img src="https://via.placeholder.com/32" alt="">
-            </td>
-
-            <td>
-                <textarea rows="3" cols="50" placeholder="Add to the discussion"></textarea>
-            </td>
-        </tr>
-    </table>
-
-  </main>
+</main>
 
 </body>
 </html>
